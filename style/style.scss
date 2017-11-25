@@ -1,6 +1,26 @@
 //Colors
 $black:#000000;
 $white:#ffffff;
-$red:#DF1E27;
+$red:#f81e28;
 $gray:#576C76;
 
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+button {
+    @include border-radius(4px); 
+    background: $red;
+    color:$white;
+    width: 120px;   
+    height: 40px;
+    line-height: 1.5;
+}
+button.btnL{
+    width: 210px;  
+    height: 60px;
+}
