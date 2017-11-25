@@ -21,7 +21,7 @@
                     <li><a href="#">ADMISSIONS <i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
                     <li><a href="#">NEWA <i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
                     <li><a href="#">EVENTS <i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
-                    <li><input></input>                   
+                    <li><input type="text" class="searchinput"></input>                   
                     <span class="fa fa-search searchicon"></span
                 </li>
                 </ul>
@@ -103,7 +103,7 @@
               
                 </span>
                 <span class="btnjion">
-                     <button class="whitebutton"> Join Now</button>
+                     <button class="whitebutton" id="btnjoinnow"> Join Now</button>
                 </span>
                
             </div>          
@@ -236,5 +236,95 @@
     <footer>
             <span>@COPYRIGHT EDUCON 2017, DESIGN & DEVELOPMENT BY THEMEUM</span>
         </footer>
+          
+         
+          
+          
+          <!form -->
+          <div class="modal" id="addModal">
+            <div class="modalContainer">
+                <div class="modalHeading">
+                 <p 
+                 class="fleft">Registration form</p>    
+                 <button id="close" >X</button>   
+                 <div class="clear"></div>
+                </div>
+                <div class="modalContent">
+                    <table class="form">
+                    <tr>
+                        <th>Username</th>
+                        <th>:</th>
+                        <td><input type="text" name="username"></td>
+                    </tr>
+                                                                     
+                    <tr id="emailtr">
+                        <th>Email</th>
+                        <th>:</th>
+                        <td><input type="text" name="email" onblur="validateEmail(this)"></td>
+                        
+                    </tr>
+
+                    <tr>
+                        <th>Mobile</th>
+                        <th>:</th>
+                        <td><input type="tel" name="mobile"></td>
+                    </tr>
+                    <tr>
+                        <th>Password</th>
+                        <th>:</th>
+                        <td><input type="password" name="password"></td>
+                    </tr>
+                    <tr>
+                        <th>Confirm Password</th>
+                        <th>:</th>
+                        <td><input type="password" name="confirmpassword"></td>
+                    </tr>
+                    <tr>
+                        <th>Username</th>
+                        <th></th>
+                        <td><button @click="showingAddModal = false;">Save</button></td>
+                    </tr>
+                    
+                </table>
+                </div>                
+            </div>  
+        </div>
+
+        <!-- Javascript -->
+          <script>
+           //Show Modal Windows
+                var modal = document.getElementById('addModal');  
+                var btn  = document.getElementById('btnjoinnow');
+                var close = document.getElementById('close'); 
+               var emailtr= document.getElementById('emailtr'); 
+              
+                btn.onclick = function(){
+                    modal.style.display="block";
+                }
+                close.onclick = function() {
+                    modal.style.display = "none";
+                }
+            // validate Email
+                function validateEmail(emailField){
+                    var iconValidation=document.createElement("th");
+                     var i=document.createElement("i");                         
+                    i.className="fa fa-minus-circle";
+                    i.style.color="red";
+                    iconValidation.appendChild(i);
+                    
+                    var iconValidationExist=document.getElementsByClassName("fa fa-minus-circle");
+                    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+                    if (reg.test(emailField.value) == false) {    
+                        emailtr.appendChild(iconValidation);                 
+                        return false;
+                    }else{
+                        if(iconValidationExist != undefined){                                        
+                        }
+                         return true;
+                    }
+                   
+                    }
+          </script>         
+
     </body>
 </html>
