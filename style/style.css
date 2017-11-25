@@ -1,6 +1,76 @@
+body {
+  background: #eaeaea;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0; }
+
+main {
+  margin: 20px; }
+
+header {
+  display: block; }
+
+div.logo {
+  float: left; }
+
+nav {
+  float: right;
+  margin: 0 auto; }
+
+nav ul {
+  overflow: hidden; }
+
+ul {
+  padding-bottom: 10px;
+  list-style-type: none;
+  text-align: justify; }
+
+li {
+  float: left;
+  padding: 5px; }
+
+ul.navi > li a {
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none; }
+
+div.content {
+  background-image: url("../img/banner.png");
+  background-repeat: no-repeat;
+  color: #ffffff;
+  min-height: 650px;
+  width: 100%;
+  margin: 0 auto; }
+
+div.imgcontainer {
+  background-image: url("../img/cta-bg.png");
+  background-repeat: repeat;
+  width: 99%;
+  margin: 0 auto;
+  color: #ffffff;
+  align-content: center; }
+
+div.wrap {
+  padding: 9%;
+  width: 30%; }
+
+h1 {
+  font-size: 40px; }
+
+h4 {
+  color: #a8a5a5; }
+
+a.rm {
+  color: #f81e28;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none; }
+
 button {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
   -ms-border-radius: 4px;
   border-radius: 4px;
   background: #f81e28;
@@ -12,5 +82,91 @@ button {
 button.btnL {
   width: 210px;
   height: 60px; }
+
+section.articles {
+  display: flex;
+  margin-top: -2px;
+  margin-bottom: 30px; }
+
+article {
+  display: inline-block;
+  width: 32%;
+  margin: 0 auto;
+  color: #000000;
+  background: #f8f8f8; }
+
+section.articles > article {
+  box-shadow: 0px 0.5em 14px 0px #c1c1c1; }
+
+div.textsp {
+  padding: 23px;
+  text-align: justify; }
+
+article p {
+  color: #a8a5a5; }
+
+section.training {
+  padding: 1px 0px 3px 0px; }
+
+span.vertical-line {
+  width: 3px;
+  background: #f81e28;
+  position: absolute;
+  color: #f81e28;
+  margin-right: 5px; }
+
+span.textVerticalLine {
+  margin-right: 1px; }
+
+img.art {
+  width: 100%;
+  height: auto; }
+
+section.secfooter {
+  background: #000000;
+  margin-top: 37px;
+  width: 100%;
+  height: 450px; }
+
+section.secfooter ul {
+  display: grid; }
+
+div.subti {
+  width: 100%;
+  margin-left: 1%; }
+
+div.links {
+  display: flex;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 4%; }
+
+article.footart {
+  display: inline-block;
+  width: 23%;
+  color: white;
+  background: #000000;
+  height: 253px;
+  text-align: initial; }
+
+h3 {
+  font-weight: bold; }
+
+div.footercontat {
+  padding-left: 44px; }
+
+input {
+  height: 30px;
+  width: 100%; }
+
+footer {
+  display: list-item;
+  color: #ffffff;
+  background: #000000;
+  text-align: center;
+  height: 30%;
+  height: 40%;
+  padding: 15px; }
 
 /*# sourceMappingURL=style.css.map */
