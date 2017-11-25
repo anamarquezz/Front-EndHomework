@@ -28,20 +28,25 @@ main{
 }
 
 header{
-    display: block;
+    display: flex;   
 }
 div.logo{
      float: left; 
 }
+img.imglogo{
+    margin-left: 39px;
+}
 
 nav{
     float:right;
-      margin:0 auto;
+    margin:0 auto;
+    
 }
 
 
-nav ul {   
-    overflow: hidden;    
+nav {   
+    overflow: hidden;  
+ 
   
 }
 
@@ -56,31 +61,42 @@ li {
     padding: 5px;    
 }
 
-ul.navi> li a {
+ul.navi li a {
     display: block;
     color: $black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
+ul.navi li a.first{
+    color:$red;
+}
 
-
+.cont{
+ float:left;   
+    padding: 21px;
+}
+span.btnjion{
+    float:right;
+        margin: 3%;
+}
 div.content{
     background-image: url("../img/banner.png") ;
-    background-repeat: no-repeat;    
-    color: $white;
-    min-height:650px;
+    background-repeat: repeat;    
+    color: $white;    
     width: 100%;
-     margin:0 auto;
+    margin:0 auto;
 }
 
 div.imgcontainer{
     background-image: url("../img/cta-bg.png") ;
-    background-repeat: repeat;
+    background-repeat: cover;
+    height: 21%;
     width: 99%;
     margin:0 auto;
     color: $white; 
     align-content: center;
+    display: inline-block;
     
   
 }
@@ -102,14 +118,23 @@ a.rm{
     font-weight: bold;
     text-decoration:none;
 }
-button {
+button.red {
     @include border-radius(4px); 
     background: $red;
     color:$white;
     width: 120px;   
     height: 40px;
-    line-height: 1.5;
- 
+    line-height: 1.5; 
+        margin: 3%;
+}
+button.whitebutton{
+    @include border-radius(4px); 
+    background: $white;
+    color:$red;
+    width: 120px;   
+    height: 40px;
+    line-height: 1.5; 
+    font-weight: bold;
 }
 button.btnL{
     width: 210px;  
@@ -164,8 +189,7 @@ img.art {
 section.secfooter{
     background: $black;
     margin-top: 37px;
-    width: 100%;
-    height: 450px;
+    width: 100%;    
 }
 section.secfooter ul{
         display: grid
@@ -181,13 +205,14 @@ div.links{
     color:$white;
     text-align: center;
         padding: 4%;
+     background: #0a0a0a;
 }
 
 article.footart{
     display: inline-block;
     width: 23%; 
     color:white;  
-    background: $black;
+    background: #0a0a0a;
     height: 253px;    
     text-align: initial;
 }
@@ -206,7 +231,7 @@ footer{
     color:$white;
     background: $black;
     text-align: center;
-    height: 30%;
-        height: 40%;
-    padding: 15px
+    height: 30%;   
+    padding: 15px;
+    margin:0 auto;
 }
