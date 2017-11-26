@@ -2,12 +2,16 @@
   .navi {
     display: none;
   }
+    .carousel{
+        display: none;
+    }
     .mobile{       
       background: #100e0e;
     color: #ffffff;
     display: table;
     padding: 11px;
     width: 500px;
+        font-size: 12px;
         
     }
     .header{
@@ -31,6 +35,16 @@
     .modalContainer {
     width: 90%;
     }
+    .mobile >li{    
+        padding-left: 3%;     
+    }
+    .mobile a{
+        color: white;
+    }
+    #idsearch{
+        padding: 0px;    
+    }
+}
     
 
 @media screen and (max-width: 900px) {
