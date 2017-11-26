@@ -2,14 +2,14 @@
 <html>
     <head>        
         <link rel="stylesheet" href="style/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-        
+        <link rel="stylesheet" href="style/mobile/stylemobile.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">        
         <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.min.css">
     </head>
     
     <body>
         <header>     
-           <img style="height: 10%; padding: 8px;" class="imglogo" src="img/logo.png"/>
+           <img style="height: 10%;  padding-top: 8px;" class="imglogo" src="img/logo.png"/>
           
           
            
@@ -21,8 +21,14 @@
                     <li><a href="#">ADMISSIONS <i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
                     <li><a href="#">NEWA <i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
                     <li><a href="#">EVENTS <i class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
-                    <li><input type="text" class="searchinput"></input>                   
-                    <span class="fa fa-search searchicon"></span
+                    <li>                  
+                    <span class="fa fa-search searchicon" id="idsearch"></span
+                </li>
+                </ul>
+                
+                 <ul class="mobile">
+                     
+                    <li><i class="fa fa-bars"></i></li>
                 </li>
                 </ul>
             </nav>          
@@ -173,12 +179,20 @@
                     
                     <div>
                     <ul>
-                    <li>23621 15 Mile Rd #C104, Clinton ML <li>
-                    <li>8035, New York, USA <li>
-                    <li>+1 (2) 345 6789 <li>
-                    <li>+1 (2) 345 6789 <li>
-                    <li>contact@yourdomain.com</a><li>  
-                        </ul>
+                        <li>23621 15 Mile Rd #C104, Clinton ML </li>
+                    <li>8035, New York, USA </li>
+                    <li>+1 (2) 345 6789 </li>
+                    <li>+1 (2) 345 6789 </li>
+                     <li>contact@yourdomain.com</li> 
+                    </ul>
+                        <div style=" padding-left: 12%;">
+                        <i class="fa fa-facebook"></i>
+                          <i class="fa fa-twitter"></i>
+                        <i class="fa fa-rss"></i>
+                        <i class="fa fa-instagram"></i>                       
+                        </div>
+                        
+                    </div>     
                      <div class="textsp">
                 </article>  
                 
@@ -254,20 +268,20 @@
                     <tr>
                         <th>Username</th>
                         <th>:</th>
-                        <td><input type="text" name="username"></td>
+                        <td><input type="text" name="username"></td>                        
                     </tr>
                                                                      
                     <tr id="emailtr">
                         <th>Email</th>
                         <th>:</th>
-                        <td><input type="text" name="email" onblur="validateEmail(this)"></td>
+                        <td><input type="text" name="email" onblur="validateEmail(this)" placeholder="example@hotmail.com"></td>
                         
                     </tr>
 
                     <tr>
                         <th>Mobile</th>
                         <th>:</th>
-                        <td><input type="tel" name="mobile"></td>
+                        <td><input type="tel" name="mobile" onblur="validateTel(this)" placeholder="(123) 456 7899"></td>
                     </tr>
                     <tr>
                         <th>Password</th>
@@ -291,40 +305,9 @@
         </div>
 
         <!-- Javascript -->
-          <script>
-           //Show Modal Windows
-                var modal = document.getElementById('addModal');  
-                var btn  = document.getElementById('btnjoinnow');
-                var close = document.getElementById('close'); 
-               var emailtr= document.getElementById('emailtr'); 
-              
-                btn.onclick = function(){
-                    modal.style.display="block";
-                }
-                close.onclick = function() {
-                    modal.style.display = "none";
-                }
-            // validate Email
-                function validateEmail(emailField){
-                    var iconValidation=document.createElement("th");
-                     var i=document.createElement("i");                         
-                    i.className="fa fa-minus-circle";
-                    i.style.color="red";
-                    iconValidation.appendChild(i);
-                    
-                    var iconValidationExist=document.getElementsByClassName("fa fa-minus-circle");
-                    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-                    if (reg.test(emailField.value) == false) {    
-                        emailtr.appendChild(iconValidation);                 
-                        return false;
-                    }else{
-                        if(iconValidationExist != undefined){                                        
-                        }
-                         return true;
-                    }
-                   
-                    }
-          </script>         
+          <script type="text/javascript" src="js/scripts.js"></script>
+
+        
 
     </body>
 </html>

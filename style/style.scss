@@ -29,6 +29,14 @@ main{
           border-radius: $radius;
 }
 
+.mobileicon{
+    display: none;
+}
+   
+div.inline{
+    display: inline;
+}
+
 header{
     display: flex;   
 }
@@ -58,9 +66,16 @@ ul {
     text-align: justify;
 }
 
+.mobile{
+    display: none;
+}
+
+#idsearch{
+   padding-top: 16px;
+}
+
 li {
-    float: left;
-    padding: 5px;    
+    float: left;  
 }
 
 ul.navi li a {
@@ -74,14 +89,9 @@ ul.navi li a.first{
     color:$red;
 }
 
-.searchicon {
-        float: right;
-        margin-right: 6px;
-        margin-top: -27px;
-        position: relative;
-        z-index: 2;
-    font-weight: bold;
-    }
+.fa fa-search searchicon{
+    
+}
 
 .cont{
  float:left;   
@@ -162,6 +172,7 @@ article{
    margin:0 auto;
    color:$black;
    background: #f8f8f8;   
+    
        
 }
 section.articles > article{
@@ -211,8 +222,7 @@ div.subti{
 }
 
 div.links{
-     display: flex;
-    display: block;
+     display: inline-flex;
     color:$white;
     text-align: center;
         padding: 4%;
@@ -260,7 +270,7 @@ footer{
 }
 
 .modalContainer{
-	width: 40%;
+	width: 29%;
 	background: #F4F3F6;
 	margin: auto;
 	margin-top: 14px;

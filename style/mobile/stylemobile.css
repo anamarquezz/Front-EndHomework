@@ -1,0 +1,41 @@
+@media screen and (max-width: 806px) {  
+  .navi {
+    display: none;
+  }
+    .mobile{       
+      background: #100e0e;
+    color: #ffffff;
+    display: table;
+    padding: 11px;
+    width: 500px;
+        
+    }
+    .header{
+        display: table-caption;
+    }
+    .fa fa-bars{
+     font-size: 24px important!;
+    }
+    
+    div.wrap {   
+        width: 88%;
+    }
+    
+    article {
+        display: none;
+    }
+    section.secfooter{
+        display: none;
+    }
+    
+    .modalContainer {
+    width: 90%;
+    }
+    
+
+@media screen and (max-width: 900px) {
+    header {
+    display: -webkit-box;
+    }
+}
+    
